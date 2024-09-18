@@ -22,12 +22,29 @@
     </nav>
 
 
-    <!-- <img src="./Quizapp Dark/Quizapp/Option 1 Copy 12.jpg" alt=""> -->
+   
 
     <div class="container">
       <div class="card , quizCard">
-        <img src="./img/pencil.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
+        <img id="cardImg" src="./img/pencil.jpg" class="card-img-top" alt="...">
+
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+          <div id="progressBar" class="progress-bar" style="width: 25%">25%</div>
+        </div>
+
+        <div class="card-body , endbody" id="endScreen" style="display: none;">
+          <div>Quiz beendet</div>
+
+          <div class="endImg">
+            <div>Du hast <br><b class="color-red" id="amountCorrectAnswers"></b> Fragen von <br><b class="color-red" id="questionsAmount"></b> richtig beantwortet.</div>
+            <img src="./img/trophy.png" alt="">
+          </div>
+
+          <!-- <div>Du hast <b id="amountCorrectAnswers"></b> Fragen von <b id="questionsAmount"></b> richtig beantwortet.</div> -->
+
+        </div>
+
+        <div class="card-body" id="questionBody" >
           <h5 class="card-title" id="questionText">Frage</h5>
 
           <div class="card , quizAnswer , mb-2" onclick="answer('answer_1')">
@@ -56,11 +73,11 @@
 
           <div class="questionFooter">
             <span>
-              <b id="currentQuestion">1</b> von <b id="allQuestions"></b> Fragen
+              <b id="questionNumber">1</b> von <b id="allQuestions"></b> Fragen
             </span>
             
 
-            <butto class="btn , btn-primary">Nächste Frage</button>
+            <button class="btn , btn-primary" id="nextBtn" disabled onclick="nextQuestion()">Nächste Frage</button>
           </div>
 
         </div>

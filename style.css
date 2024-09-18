@@ -27,3 +27,25 @@ body {
     cursor: pointer;
     background-color: #FEFAEF;
 }
+
+.bg-success, .bg-danger {
+    color: white;
+}
+
+.endbody {
+    padding-right: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.endImg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+.color-red{
+    color: red;
+}
